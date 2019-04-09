@@ -11,6 +11,7 @@ import uk.johndorman.utils.Button;
 public class Menu {
 
 	public Button play, score, options, credits, quit;
+	private Font tinytots;
 
 	public Menu(){
 		int fillerY = 275;
@@ -19,16 +20,19 @@ public class Menu {
 		options = new Button(400, fillerY +=75, 220, 50).setText("Options");  //Reference.CENTER_X - 100
 		credits = new Button(400, fillerY +=75, 220, 50).setText("Credits"); 
 		quit = new Button(440, fillerY +=75, 150, 50).setText("Quit"); //Reference.CENTER_X - 100
+		
+		tinytots = new Font("04b03", Font.BOLD, 45);
 	}
 	
 	public void render(Graphics g){
 		g.setColor(Color.BLACK);
 		g.fillRect(0,0, Game.WIDTH, Game.HEIGHT);
-		g.drawImage(Images.background, 0, 0, null);
+		g.drawImage(Images.background_sky, 0, 0, Game.WIDTH, Game.HEIGHT, null);
+		g.drawImage(Images.background_mountains, 0, 0, Game.WIDTH, Game.HEIGHT, null);
 		g.drawImage(Images.title, (Game.WIDTH/2)-230, 0, null);
 		g.drawImage(Images.sub_title, (Game.WIDTH/2)-350, 160, null);
-		
-		Font tinytots = new Font("04b03", Font.BOLD, 45);
+
+
 		g.setFont(tinytots);
 		
 		play.drawButton(g, 0);

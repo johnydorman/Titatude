@@ -2,6 +2,8 @@ package uk.johndorman.gfx;
 
 import java.awt.image.BufferedImage;
 
+import org.newdawn.slick.opengl.Texture;
+
 import uk.johndorman.libs.Images;
 import uk.johndorman.utils.SpriteSheet;
 
@@ -63,8 +65,6 @@ public class Textures {
 	public BufferedImage playerLeft[] = new BufferedImage[4];
 	
 	public Textures(){
-		
-		
 		sheetTest = new SpriteSheet(Images.spritesheetTest, 32);
 		playerSheet = new SpriteSheet(Images.spritesheetPlayer, 32, 70);
 		
@@ -138,7 +138,5 @@ public class Textures {
 		playerLeft[1] = playerSheet.getSprite(7,1);
 		playerLeft[2] = playerSheet.getSprite(8,1);
 		playerLeft[3] = playerSheet.getSprite(9,1);
-		
-
 	}
 }

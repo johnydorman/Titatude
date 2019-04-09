@@ -7,9 +7,8 @@ import java.util.ArrayList;
 
 public class Fonts {
 
-	private static ArrayList<Fonts> fontList = new ArrayList<Fonts>();
-	
 	private static String fontPath;
+	private static ArrayList<Fonts> fontList = new ArrayList<Fonts>();
 	
 	public Fonts(String filePath){
 		Fonts.fontPath = Reference.FONT_LOCATION + filePath;
@@ -29,6 +28,4 @@ public class Fonts {
 	public static void addFont(Fonts font){
 		fontList.add(font);
 	}
-	
-	
 }

@@ -24,7 +24,8 @@ public class Options {
 	public void render(Graphics g){
 		g.setColor(Color.BLACK);
 		g.fillRect(0,0, Game.WIDTH, Game.HEIGHT);
-		g.drawImage(Images.background, 0, 0, null);
+		g.drawImage(Images.background_sky, 0, 0, Game.WIDTH, Game.HEIGHT, null);
+		g.drawImage(Images.background_mountains, 0, 0, Game.WIDTH, Game.HEIGHT, null);
 		g.drawImage(Images.options, (Game.WIDTH/2)-230, 0, null);
 		g.drawImage(Images.options_sub_title, (Game.WIDTH/2)-385, 150, null);
 		

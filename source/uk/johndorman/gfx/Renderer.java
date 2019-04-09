@@ -5,6 +5,7 @@ import java.awt.Graphics;
 
 import uk.johndorman.Game;
 import uk.johndorman.libs.Images;
+import uk.johndorman.world.Levels;
 
 
 public class Renderer {
@@ -13,11 +14,7 @@ public class Renderer {
 	public void renderBackground(Graphics g){
 		switch(Game.state){
 		case GAME:
-			if(Game.getInstance().getPlayerLevelId() == 1)
-				g.drawImage(Images.levelOneBackground, 0, 0, null);
-			else if(Game.getInstance().getPlayerLevelId() == 2)
-				System.out.println("level 2");
-			else System.out.println("Invalid level Id");
+			Levels.renderBackground(Game.getInstance().getPlayerLevelId(), g);
 			break;
 		case MENU:
 			Game.getInstance().getMenu().render(g);
@@ -41,9 +38,7 @@ public class Renderer {
 			g.setColor(Color.RED);
 			g.drawString("UNKOWN GAMESTATE", 150, 150);
 			break;
-		
 		}
-
 	}
 	
 	public void renderForeBackground(Graphics g){
@@ -63,18 +58,10 @@ public class Renderer {
 			
 			break;
 		case MENU:
-			Game.getInstance().getMenu().render(g);
-			break;
 		case OPTIONS:
-			Game.getInstance().getOptions().render(g);
-			break;
 		case CREDITS:
-			Game.getInstance().getCredits().render(g);
-			break;
 		case PAUSE:
-			break;
 		case SCORE:
-			break;
 		case DEATH:
 			break;
 		default:
@@ -89,18 +76,13 @@ public class Renderer {
 	public void renderForeground(Graphics g){
 		switch(Game.state){
 		case GAME:
-			Game.getInstance().getController().render(g);
+			Game.getInstance().getController().renderForeground(g);
 			break;
 		case MENU:
-			break;
 		case OPTIONS:
-			break;
 		case CREDITS:
-			break;
 		case PAUSE:
-			break;
 		case SCORE:
-			break;
 		case DEATH:
 			break;
 		default:

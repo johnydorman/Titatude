@@ -22,7 +22,8 @@ public class Pause {
 	public void render(Graphics g){
 		g.setColor(Color.BLACK);
 		g.fillRect(0,0, Game.WIDTH, Game.HEIGHT);
-		g.drawImage(Images.background, 0, 0, null);
+		g.drawImage(Images.background_sky, 0, 0, Game.WIDTH, Game.HEIGHT, null);
+		g.drawImage(Images.background_mountains, 0, 0, Game.WIDTH, Game.HEIGHT, null);
 		g.drawImage(Images.pause, (Game.WIDTH/2)-240, 0, null);
 		g.drawImage(Images.pause_sub_title, (Game.WIDTH/2)-370, 160, null);
 		

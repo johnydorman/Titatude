@@ -2,6 +2,9 @@ package uk.johndorman.world;
 
 import java.awt.image.BufferedImage;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import uk.johndorman.Controller;
 import uk.johndorman.Game;
 import uk.johndorman.gfx.Textures;
@@ -15,6 +18,9 @@ public class Level {
 	private Controller controller = Game.getInstance().getController();
 	private Textures tex = Game.getInstance().getTextureHandler();
 
+	public Level(String name, int levelNumber, String[] textures, String objects) {
+		
+	}
 	
 	public Level(int levelNumber){
 		switch(levelNumber){
@@ -23,10 +29,19 @@ public class Level {
 				break;
 			default:
 				image = Images.levelOne;
+				break;
 	   }
     }
 	
-    public void loadLevel(){
+	public void load(String filename) {
+		JSONArray loadFile = new JSONArray(filename);
+		
+		for(int index = 0; index < loadFile.length(); index++) {
+			loadFile.getJSONObject(index);
+		}
+	}
+	
+    public void load(){
        int w = image.getWidth();
        int h = image.getHeight();
 	        

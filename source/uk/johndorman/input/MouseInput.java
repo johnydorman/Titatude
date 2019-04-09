@@ -44,7 +44,7 @@ public class MouseInput extends MouseAdapter{
 			case MENU:
 				if(rect.intersects(menu.play)){
 					AudioPlayer.getMusic(Audio.MUSIC_TITLE).stop();
-					Game.getInstance().currentLevel.loadLevel();
+					Game.getInstance().currentLevel.load();
 					Game.state = GameState.GAME;
 				}
 				if(rect.intersects(menu.score)){

@@ -1,0 +1,24 @@
+{
+	"level" : {	
+		"name" : "something",
+		"number" : 1,
+		"textures" : [
+			"ground_01" : { "src" : "level_1\ground_01.png", "width" : 86, "height" : 64 },
+			"ground_02" : { "src" : "level_1\ground_02.png", "width" : 80, "height" : 80 },
+			"ground_03" : { "src" : "level_1\ground_03.png", "width" : 80, "height" : 64 },
+			"ground_castle" : { "src" : "level_1\ground-castle.png", "width" : 250, "height" : 250 },
+			"ground_pines" : { "src" : "level_1\ground-pines.png", "width" : 250, "height" : 250 },
+			"ground_trees" : { "src" : "level_1\ground-trees.png", "width" : 250, "height" : 250 },
+			"ground_pines_right" : { "src" : "level_1\ground-pines-right.png", "width" : 250, "height" : 250 },
+			"rock_wall_01" : { "src" : "level_1\rock-wall-01.png", "width" : 250, "height" : 250 },
+			"rock_wall_02" : { "src" : "level_1\rock-wall-02.png", "width" : 250, "height" : 250 },
+			"rock_wall_03" : { "src" : "level_1\rock-wall-03.png", "width" : 250, "height" : 250 },
+			"ground_01" : { "src" : "level_1\ground_01.png", "width" : 250, "height" : 250 },
+			
+		],
+		"objects" : [
+			"block_0" : {"x" : 0, "y" : 100, "texture" : "ground_01", "collision" : 1},
+			"block_1" : {"x" : 50, "y" : 100, "texture" : "ground_01", "collision" : 1},
+		]
+	}
+}

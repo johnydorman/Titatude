@@ -13,7 +13,7 @@ public class ResourceLoader {
 	public static void LoadImages()
 	{
 		try{
-			Images.background = imageLoader.loadImage("background1.png");
+			//Images.background = imageLoader.loadImage("background1.png");
 			Images.backgroundHouse = imageLoader.loadImage("house.png");
 			Images.backgroundHouse2 = imageLoader.loadImage("house2.png");
 			Images.backgroundHouse3 = imageLoader.loadImage("house3.png");
@@ -36,6 +36,12 @@ public class ResourceLoader {
 			Images.spritesheetPlayer = imageLoader.loadImage("female.png");
 			Images.levelOne = imageLoader.loadImage("level/level1.png");
 			Images.levelOneBackground = imageLoader.loadImage("level/level1Background1.png");
+			
+			
+			Images.background_mountains = imageLoader.loadImage("mountains.png");
+			Images.background_sky = imageLoader.loadImage("sky.png");
+			Images.background_woods = imageLoader.loadImage("woods.png");
+			
 		} catch (IOException e){
 			e.printStackTrace();
 		}

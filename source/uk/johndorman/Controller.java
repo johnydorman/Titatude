@@ -15,7 +15,7 @@ public class Controller {
 		}
 	}
 	
-	public void render(Graphics g){
+	public void renderForeground(Graphics g){
 		for(CoreObject obj : objects){
 			if(obj.getId() < 200)
 				obj.render(g);
